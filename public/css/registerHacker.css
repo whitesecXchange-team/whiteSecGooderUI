@@ -1,0 +1,131 @@
+form{
+    padding: 60px;
+    width: 73%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: linear-gradient(to bottom, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    color:white;
+    border-radius: 8px;
+    gap: 0.8rem;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(to top, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.alert {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: red;
+    width: 70%;
+    background-color: #363633af;
+    border-radius: 15px;
+    border-style: solid;
+    padding: 3px 7px 3px 7px;
+}
+
+.alert ul {
+
+    list-style-type: none;
+}
+
+.content{    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex-direction: row;
+    width: 58%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+::placeholder{
+    color: white;
+}
+
+.nameField{
+    display: flex;
+    flex-direction: column;
+}
+
+.nameField .firstName, .lastName{
+    background: rgba(255, 255, 255);
+}
+
+.nameField label {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 14 px;
+}
+
+.loginInfo{
+    justify-content: center;
+    text-align: center;
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    gap: 8px;
+}
+
+
+#password{
+    width: 50%;
+}
+
+#confirmPassword{
+    width: 50%;
+}
+
+.hackerDesc{
+    font-size: 35px;
+    font-family:monospace, "Share Tech Mono";
+    display:flex;
+    flex-direction: column;
+    /* margin:50px; */
+    gap: 0.5rem;
+    /* margin-right:auto; */
+}
+
+#descLine1{
+    color:black;
+}
+
+#descLine2{
+    color:gray;
+}
+
+.btn{
+    color: black;
+    background-color: #CC00FF;
+    border:none;
+    border-radius: 8px;
+    justify-content: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0029FF;
+    color: white;
+    transition: 0.3s;
+}
