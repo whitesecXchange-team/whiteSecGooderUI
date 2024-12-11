@@ -7,7 +7,7 @@ html, body {
 }
 
 .report-form-container {
-    margin: 40px;
+    margin: 50px;
     display: flex;
     flex: 1;
     align-items: center;
@@ -16,16 +16,101 @@ html, body {
     color: white;
     font-family: "Share Tech Mono", monospace;
     color: white;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
     gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.normal-input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: #3e3e3e;
+    color: white;
+    outline: none;
+    font-family: "Share Tech Mono", monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+    border: none;
+    background-color: #3e3e3e;
+    color: white;
+    outline: none;
+    font-family: "Share Tech Mono", monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.file-btn {
+    background-color: transparent;
+}
+
+input::file-selector-button {
+    background-color: #CC00FF;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight:lighter;
+    font-size: 12px;
+    color: white;
+    border: none;
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+input::file-selector-button:hover {
+    background-color: #0029FF;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-left: 5px;
 }
 
 .creation-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    width: 100%;
 }
 
 .bounty-title {
     color: #CC00FF;
+}
+
+button {
+    color: white;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight:lighter;
+    font-size: 15px;
+    background-color: #CC00FF;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #0029FF;
+    transition: 0.3s;
+    cursor: pointer;
 }

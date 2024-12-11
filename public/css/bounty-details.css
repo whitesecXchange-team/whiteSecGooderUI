@@ -10,19 +10,36 @@ html, body {
     display: flex;
     flex: 1;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 .bounty-details-container {
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-direction: column;
     font-family: "Share Tech Mono", monospace;
     color: white;
     margin: 40px;
     gap: 8px;
+}
+
+.top {
+    display: grid;
+    width: 100%;
+    grid-template-columns: fit auto 50%;
+    align-items: center;
+    border-bottom: #757575 solid 1px;
+}
+
+.top .reward {
+    text-align: end;
+}
+
+.bottom {
+    width: 100%;
+    align-self: center;
+    text-align: justify;
 }
 
 .bounty-details-container .company {
@@ -57,4 +74,12 @@ html, body {
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
+    border: none;
+    transition: 0.3s;
+}
+
+.submit-report-button:hover {
+    background-color: #0029FF;
+    transition: 0.3s;
+    cursor: pointer;
 }

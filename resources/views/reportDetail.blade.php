@@ -26,14 +26,14 @@
                 <p><em>File download is restricted to the report uploader and the assigning company.</em></p>
             @endif
 
-            
+
             @if($isCompany && $report->status===0)
                 <div class="company-buttons">
                     <!-- make when press button approve: add bal, change status to 1; if reject: change status to 2; while none: 0 -->
-                    <form action="{{ route('report.approval', ['id' => $report->id]) }}" method="POST">
+                    <form action="{{ route('report.approval', ['id' => $report->id]) }}" method="POST" autocomplete="off">
                         @csrf
                         <button name="btn" value ="1" class="approve-butt">Approve</button></form>
-                    <form action="{{ route('report.approval', ['id' => $report->id]) }}" method="POST">
+                    <form action="{{ route('report.approval', ['id' => $report->id]) }}" method="POST" autocomplete="off">
                         @csrf
                         <button name="btn" value="2" class="reject-butt">Reject</button></form>
                 </div>
@@ -55,7 +55,7 @@
             @elseif($report->status===2)
                 <div class="words">
                     <p>This report has been rejected</p>
-                </div>            
+                </div>
             @endif
 
             @if($isUploader)
@@ -79,7 +79,7 @@
         @endif
 
         <a href="{{ route('reports.page') }}" class="back-link">back to reports list</a>
-        
+
     </div>
     @include('footer')
 </body>

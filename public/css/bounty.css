@@ -6,7 +6,7 @@
 .available-status {
     font-family: "Share Tech Mono", monospace;
     color: white;
-    margin: 40px;
+    /* margin: 40px; */
 }
 
 html, body {
@@ -21,6 +21,9 @@ html, body {
 .container {
     margin: 50px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2, p {
@@ -39,58 +42,81 @@ h2 {
     color: #CC00FF;
 }
 
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .bounty {
-  border-radius: 32px;
-  box-shadow: inset 0px 1px 10px 0px black;
-  background: rgba(204, 0, 255, .19);
-  transition: background-color 0.1s ease-in-out;
-  height: 190px;
-  width: 1186px;
-  /* margin: auto; */
-  margin-top: 20px;
-  margin-bottom: 10px;
+    border-radius: 32px;
+    box-shadow: inset 0px 1px 10px 0px black;
+    background: rgba(204, 0, 255, .19);
+    transition: background-color 0.1s ease-in-out;
+    height: 220px;
+    width: 100%;
+    /* margin: auto; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .bounty:hover {
-  background-color: rgba(0, 41, 255, .42);
+    background-color: rgba(0, 41, 255, .42);
 }
 
 .bounty:hover .company {
-  color: #fbc301;
+    color: #fbc301;
 }
 
 .bounty:hover .money {
-  color: #fbc301;
+    color: #fbc301;
+}
+
+.bounty:hover h2 {
+    color: #CC00FF;
 }
 
 .bounty h2 {
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 .bounty .money {
-  float: right;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-right: 20px;
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
 }
 
 .bounty .bounty-description {
-  color: white;
-  margin-left: 20px;
-  margin-top: 5px;
-  margin-right: 20px;
-  margin-bottom: 5px;
+    color: rgb(155, 155, 155);
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.overflow-protector {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
 }
 
 a.button {
-  /* margin: auto; */
-  display: block;
-  height: 190px;
-  width: 1186px;
-  text-decoration: none;
+    /* margin: auto; */
+    display: block;
+    height: 190px;
+    width: 1186px;
+    text-decoration: none;
 }
 
 .create-bounty-container {
@@ -107,6 +133,7 @@ a.button {
     background-color: #CC00FF;
     padding: 5px 15px 5px 15px;
     border-radius: 15px;
+    transition: 0.3s;
 }
 
 .create-bounty-container a {
@@ -115,4 +142,10 @@ a.button {
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
+}
+
+.create-bounty-button:hover {
+    cursor: pointer;
+    background-color: #0029FF;
+    transition: 0.3s;
 }

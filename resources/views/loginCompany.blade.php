@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="form-container">
-            <form action="{{ route('company.login') }}" method="POST" class="form">
+            <form action="{{ route('company.login') }}" method="POST" class="form" autocomplete="off">
                 @csrf
                 <div class="username">
                     <input id="username" name="company_name" type="text" placeholder="Username">

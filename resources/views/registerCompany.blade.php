@@ -12,7 +12,7 @@
 <body>
 	<div class="content">
         <div class="mainForm">
-	    	<form action="{{ route('company.register') }}" method="POST">
+	    	<form action="{{ route('company.register') }}" method="POST" autocomplete="off">
                 @csrf
                 <div class="companyNameField">
 				    <label for="companyName">Company</label>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    
+
     @if($errors->any())
     <div class="alert alert-danger">
         <ul>

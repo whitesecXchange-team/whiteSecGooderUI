@@ -8,12 +8,12 @@
     @include('nav')
     <body>
         <div class="container">
-            <div class="available-status">
-                @if($bounties->isEmpty())
+            @if($bounties->isEmpty())
+                <div class="available-status">
                     <p>No bounties available.</p>
-                @endif
-            </div>
-            
+                </div>
+            @endif
+
             @auth('company')
             <div class="create-bounty-container">
                 <a href="{{ route('bounty.create') }}" class="create-bounty-button">create bounty</a>
@@ -23,11 +23,13 @@
             @foreach($bounties as $bounty)
             <a href="{{ route('bounty.details', ['id' => $bounty->id]) }}" class="button">
                 <div class="bounty">
-                    <h2 class="bounty-title">{{ $bounty->title }}</h2>
-                    <p class="company">{{ $bounty->company->company_name }}</p> <!-- Assuming 'company' is a relationship -->
-                    <p class="money">${{ $bounty->reward }}</p>
-                    <hr>
-                    <p class="bounty-description">{{ $bounty->description }}</p>
+                    <div class="overflow-protector">
+                        <h2 class="bounty-title">{{ $bounty->title }}</h2>
+                        <p class="company">{{ $bounty->company->company_name }}</p> <!-- Assuming 'company' is a relationship -->
+                        <p class="money">${{ $bounty->reward }}</p>
+                        <hr>
+                        <p class="bounty-description">{{ $bounty->description }}</p>
+                    </div>
                 </div>
             </a>
             @endforeach

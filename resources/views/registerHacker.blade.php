@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <div class="content">
         <div class="hackerDesc" >
             <div id="descLine1">
@@ -24,7 +24,7 @@
         </div>
 
         <div class="mainForm" style="float:right;">
-            <form action="{{ route('user.register') }}" method="POST">
+            <form action="{{ route('user.register') }}" method="POST" autocomplete="off">
                     @csrf
                     <div class="nameField">
                         <label for="firstName">first name</label>
@@ -46,7 +46,7 @@
                         <input id="password" name="password" type="password" placeholder="Password" class="password">
                         <input id="confirmPassword" name="password_confirmation" type="password" placeholder="Confirm Password" class="confirmPassword">
                     </div>
-                    
+
                 <br>
                 <div>
                     <button class="btn" name="register" value="Submit">Submit</button>

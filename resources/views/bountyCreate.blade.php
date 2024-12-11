@@ -20,7 +20,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('bounty.store') }}" method="POST" class="form">
+            <form action="{{ route('bounty.store') }}" method="POST" class="form" autocomplete="off">
                 @csrf
 
                 <div class="form-group">
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" id="reward" name="reward" value="{{ old('reward') }}" placeholder="Reward" required>
+                    <input type="text" id="reward" name="reward" value="{{ old('reward') }}" placeholder="Reward" class="reward" required>
                 </div>
 
                 <div class="form-group">

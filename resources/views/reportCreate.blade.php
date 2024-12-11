@@ -8,9 +8,11 @@
 <body>
     @include('nav')
     <div class="report-form-container">
-        <h1>Report Submission for <span class="bounty-title">{{ $bounty->title }}</span></h1>
-        <p>{{ $bounty->company->company_name }}</p>
-        <p>${{ $bounty->reward }}</p>
+        <div class="desc">
+            <h1>Report Submission for <span class="bounty-title">{{ $bounty->title }}</span></h1>
+            <p>Bounty Assignor: {{ $bounty->company->company_name }}</p>
+            <p>Reward: ${{ $bounty->reward }}</p>
+        </div>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -22,11 +24,11 @@
             </div>
         @endif
 
-        <form class="creation-form" action="{{ route('report.store', ['id' => $bounty->id]) }}" method="POST" enctype="multipart/form-data">
+        <form class="creation-form" action="{{ route('report.store', ['id' => $bounty->id]) }}" method="POST" enctype="multipart/form-data" autocomplete="off">
             @csrf
 
             <div class="form-group">
-                <input type="text" id="title" name="title" value="{{ old('title') }}" placeholder="Report Title" required>
+                <input class="normal-input" type="text" id="title" name="title" value="{{ old('title') }}" placeholder="Report Title" required>
             </div>
 
             <div class="form-group">
@@ -35,7 +37,7 @@
 
             <div class="form-group">
                 <label for="file">Attach File (optional)</label>
-                <input type="file" id="file_path" name="file_path" accept=".pdf,.doc,.docx">
+                <input class="file-btn" type="file" id="file_path" name="file_path" accept=".pdf,.doc,.docx">
             </div>
 
             <button type="submit" class="submit-button">Submit Report</button>

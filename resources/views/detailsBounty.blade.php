@@ -8,10 +8,12 @@
 <body>
     @include('nav')
     <div class="bounty-details-container">
-        <h1 class="title">{{ $bounty->title }}</h1>
-        <p class="company">{{ $bounty->company->company_name }}</p>
-        <p class="reward">${{ $bounty->reward }}</p>
-        <div class="description-container">
+        <div class="top">
+            <h1 class="title">{{ $bounty->title }}</h1>
+            <p class="company">{{ $bounty->company->company_name }}</p>
+            <p class="reward">${{ $bounty->reward }}</p>
+        </div>
+        <div class="bottom">
             <p class="description">{{ $bounty->description }}</p>
         </div>
 
