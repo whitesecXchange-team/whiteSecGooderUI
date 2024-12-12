@@ -13,6 +13,7 @@
                     <p>No reports available.</p>
                 @else
                     <table class="reports-table">
+                    
                         <thead>
                             <tr>
                                 <th>Report Title</th>
@@ -24,15 +25,24 @@
                         </thead>
                         <tbody>
                             @foreach($reports as $report)
+                            @if(auth('company')->check() && auth('company')->id() === $report->bounty->company_id || auth('web')->check())
                             <tr>
                                 <td>{{ $report->title }}</td>
                                 <td>{{ $report->bounty->title }}</td>
-                                <td>{{ $report->user->name ?? 'N/A' }}</td>
+                                
+                                @if(auth()->id() === $report->user_id)
+                                    <td style="color:cyan">{{ $report->user->name ?? 'N/A' }}</td>
+                                @else
+                                    <td>{{ $report->user->name ?? 'N/A' }}</td>
+                                @endif
+                                
                                 <td>{{ $report->created_at->format('Y-m-d') }}</td>
                                 <td>
                                     <a href="{{ route('reports.show', ['id' => $report->id]) }}" class="view-link">View Details</a>
                                 </td>
                             </tr>
+                            @endif
+                            
                             @endforeach
                         </tbody>
                     </table>

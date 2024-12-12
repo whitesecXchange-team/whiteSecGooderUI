@@ -46,13 +46,13 @@
                     </form>
                 </div> -->
 
-            @elseif($report->status===1)
+            @elseif($isCompany && $report->status===1)
                 <div class="words">
                     <p>This report has been approved</p>
                 </div>
 
 
-            @elseif($report->status===2)
+            @elseif($isCompany && $report->status===2)
                 <div class="words">
                     <p>This report has been rejected</p>
                 </div>
